@@ -35,20 +35,12 @@ type FixitCommand struct {
 
 	dataDir    string
 	machineTag names.MachineTag
-
-	unit            names.UnitTag
-	commands        string
-	showHelp        bool
-	noContext       bool
-	forceRemoteUnit bool
-	relationId      string
-	remoteUnitName  string
 }
 
 func (c *FixitCommand) Info() *cmd.Info {
 	return &cmd.Info{
 		Name:    "juju-121-upgrades",
-		Args:    "<machie-id>",
+		Args:    "<machine-id>",
 		Purpose: "run the missing upgrade steps",
 	}
 }
